@@ -25,4 +25,5 @@ This project uses my **personal** Cloudflare account only, never the company acc
 ## Git
 
 - Remote: `github.com/lewiswang0516/lewis-ai-blogs` (public).
+- Push directly to `main`. No feature branches or PRs for this repo.
 - Commits use the GitHub noreply email set in this repo's local git config. Do not change it to the company email.
