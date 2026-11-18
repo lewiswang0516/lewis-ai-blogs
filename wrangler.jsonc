@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lewis-ai-blogs",
+  // Personal Cloudflare account only. Deploys fail until this is set,
+  // so a fallback to the company OAuth login can never deploy here.
+  "account_id": "REPLACE_WITH_PERSONAL_ACCOUNT_ID",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}
