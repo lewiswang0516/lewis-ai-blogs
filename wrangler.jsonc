@@ -5,6 +5,12 @@
   // OAuth login fails instead of deploying to another account.
   "account_id": "e8f2d3d6532ac22e30fccb438ea63a55",
   "compatibility_date": "2026-11-01",
+  "routes": [
+    {
+      "pattern": "blogs.lewiswang.com.au",
+      "custom_domain": true,
+    },
+  ],
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page",
