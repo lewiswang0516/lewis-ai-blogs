@@ -1,5 +1,5 @@
 ---
-title: '怎么省 token：以 Claude Code 为例（上）'
+title: 'AI 从入门到实战 09｜以 Claude Code 为例，讲讲怎么省 token（上）'
 description: '大部分 token 花在反复重读上下文上。上篇讲钱花在哪儿，以及两个习惯：开工前选对档位，让上下文保持小。'
 pubDate: '2026-11-21T01:00:00Z'
 ---

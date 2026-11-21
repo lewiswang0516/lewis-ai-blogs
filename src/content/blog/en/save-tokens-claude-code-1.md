@@ -1,5 +1,5 @@
 ---
-title: 'How to Save Tokens: Claude Code as an Example (Part 1)'
+title: 'Hands-On AI 09 | How to Save Tokens: Claude Code as an Example (Part 1)'
 description: 'Most tokens go to re-reading context again and again. Part 1 shows where the money goes, and two habits: pick the right tier before you start, and keep the context small.'
 pubDate: '2026-11-21T01:00:00Z'
 ---

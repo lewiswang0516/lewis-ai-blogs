@@ -1,5 +1,5 @@
 ---
-title: 'How to Save Tokens: Claude Code as an Example (Part 2)'
+title: 'Hands-On AI 10 | How to Save Tokens: Claude Code as an Example (Part 2)'
 description: 'The context is already there. Here is how to get more value from it: do not break the cache, take fewer detours, hand the grunt work to subagents, and use a checklist.'
 pubDate: '2026-11-21T01:05:00Z'
 ---
@@ -156,6 +156,12 @@ The Codex column comes from OpenAI's official best practices ([source](https://d
 Back to that Wednesday afternoon. Looking back now, almost every mistake that day has a match in these two posts: one session dragged from Tuesday to Wednesday, with the cache long expired after a night; an unrelated topic like deployment slipped in halfway; and when I could not read an error, I pasted in the whole log.
 
 None of these habits is a complex trick. Most are common sense, like "open a new session when the topic changes" and "say it clearly before you start". The hard part is remembering them when you are deep in the work. I hope these two posts help you remember a bit sooner.
+
+## Coming next
+
+The next post is about plan mode, checkpoints and rewind, and how to use them to redo less work.
+
+Keep reading: [Hands-On AI 11 | Plan Mode, Checkpoints and Rewind: A Workflow With Less Rework](/blog/plan-checkpoint-rewind/)
 
 ## Further reading
 
