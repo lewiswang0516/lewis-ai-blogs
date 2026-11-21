@@ -1,5 +1,5 @@
 ---
-title: 'How to Save Tokens: Claude Code as an Example (Part 1)'
+title: 'Hands-On AI 09 | How to Save Tokens: Claude Code as an Example (Part 1)'
 description: 'Most tokens go to re-reading context again and again. Part 1 shows where the money goes, and two habits: pick the right tier before you start, and keep the context small.'
 pubDate: '2026-11-21T01:00:00Z'
 ---
@@ -138,7 +138,7 @@ Part 1 was about what should and should not go into the context.
 
 Part 2 is about getting more value from the same context: how to avoid breaking the cache, how to take fewer detours and redo less work, and when to hand the grunt work to a subagent. At the end there is a checklist that covers all five habits.
 
-Keep reading: [Part 2](/blog/save-tokens-claude-code-2/)
+Read next: [Part 2](/blog/save-tokens-claude-code-2/)
 
 ## References
 

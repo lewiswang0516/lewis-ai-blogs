@@ -140,6 +140,12 @@ th {
 :lang(zh-CN) .prose {
 	line-height: 1.85;
 }
+@media (max-width: 720px) {
+	.prose table {
+		display: block;
+		overflow-x: auto;
+	}
+}
 .prose h2 {
 	margin-top: 2.5rem;
 	margin-bottom: 1rem;
