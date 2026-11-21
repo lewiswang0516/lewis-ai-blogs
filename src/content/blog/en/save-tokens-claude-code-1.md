@@ -33,9 +33,9 @@ There is one more layer that is easy to miss. Each time the agent uses a tool (r
 
 Here is an example. The session starts with 20 thousand tokens of context, and each turn adds 2 thousand. The chart below shows how much is actually sent in each of 50 turns.
 
-![Stacked bar chart of tokens sent per turn: gray is re-reading earlier context, blue is new in this turn](../../../assets/save-tokens/tokens-per-turn-en.svg)
+![Stacked bar chart of tokens sent per turn: purple is re-reading earlier context, navy is new in this turn](../../../assets/save-tokens/tokens-per-turn-en.svg)
 
-The big gray area is what you pay to re-read old content. The thin blue line on top is what is really new in each turn. In the last few turns, even if you only ask "what is this variable called?", you send more than a hundred thousand tokens with it. One casual question can burn several dollars.
+The big purple area is what you pay to re-read old content. The thin navy line on top is what is really new in each turn. In the last few turns, even if you only ask "what is this variable called?", you send more than a hundred thousand tokens with it. One casual question can burn several dollars.
 
 So are long sessions crazy expensive? Not quite, because of the cache. The part that is the same as last time is re-read by the server at a much lower price.
 
