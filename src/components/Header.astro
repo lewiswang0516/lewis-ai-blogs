@@ -18,16 +18,14 @@ const switchHref = alternates[otherLang] ?? localizePath('/', otherLang);
 
 <header>
 	<nav>
-		<h2>
-			<a href={localizePath('/', lang)}>{SITE_TITLE}</a>
-		</h2>
+		<a class="brand" href={localizePath('/', lang)}>{SITE_TITLE}</a>
 		<div class="internal-links">
 			<HeaderLink href={localizePath('/', lang)} exact>{t('nav.home')}</HeaderLink>
 			<HeaderLink href={localizePath('/blog/', lang)}>{t('nav.blog')}</HeaderLink>
 		</div>
 		<div class="end-links">
-			<SocialLinks lang={lang} />
-			<a class="lang-switch" href={switchHref} hreflang={otherLang} aria-label={t('nav.switchLabel')}>
+			<SocialLinks lang={lang} variant="solid" />
+			<a class="pill pill-outline lang-switch" href={switchHref} hreflang={otherLang} aria-label={t('nav.switchLabel')}>
 				{t('nav.switch')}
 			</a>
 		</div>
@@ -35,44 +33,47 @@ const switchHref = alternates[otherLang] ?? localizePath('/', otherLang);
 </header>
 <style>
 	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		background: color-mix(in srgb, var(--neutral-background-light) 92%, transparent);
+		backdrop-filter: blur(8px);
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 1rem;
+		width: var(--page-width);
+		max-width: calc(100% - 2rem);
+		margin: auto;
+		padding: 1rem 0;
 	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+	.brand {
+		color: var(--primary-navy);
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
 		text-decoration: none;
+		white-space: nowrap;
 	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+	.internal-links {
+		display: flex;
+		gap: 0.25rem;
 	}
 	.end-links {
 		display: flex;
 		align-items: center;
+		gap: 0.75rem;
 	}
 	.lang-switch {
-		font-size: 0.9em;
+		padding: 0.45rem 1rem;
 		white-space: nowrap;
 	}
 	@media (max-width: 720px) {
+		.brand {
+			font-size: 1.05rem;
+		}
 		.end-links :global(.social-links) {
 			display: none;
 		}
