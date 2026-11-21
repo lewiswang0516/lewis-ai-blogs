@@ -1,0 +1,62 @@
+---
+import type { Lang } from '../i18n/ui';
+import { postPath, type Post } from '../i18n/utils';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	posts: Post[];
+	lang: Lang;
+}
+
+const { posts, lang } = Astro.props;
+---
+
+<ul class="post-list">
+	{
+		posts.map((post) => (
+			<li>
+				<a href={postPath(post)}>
+					<h3 class="title">{post.data.title}</h3>
+					<p class="date">
+						<FormattedDate date={post.data.pubDate} lang={lang} />
+					</p>
+					<p class="description">{post.data.description}</p>
+				</a>
+			</li>
+		))
+	}
+</ul>
+<style>
+	.post-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+	}
+	.title {
+		margin: 0 0 0.25rem;
+		color: rgb(var(--black));
+		font-size: 1.563em;
+		line-height: 1.2;
+		transition: color 0.2s ease;
+	}
+	.date {
+		margin: 0 0 0.5rem;
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+	.description {
+		margin: 0;
+		color: rgb(var(--gray-dark));
+	}
+	a:hover .title {
+		color: rgb(var(--accent));
+	}
+</style>

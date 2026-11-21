@@ -1,0 +1,61 @@
+---
+import { SITE_TITLE } from '../consts';
+import { htmlLang, type Lang } from '../i18n/ui';
+import { alternatesFor, getPosts, localizePath, useTranslations } from '../i18n/utils';
+import BaseHead from './BaseHead.astro';
+import Footer from './Footer.astro';
+import Header from './Header.astro';
+import PostList from './PostList.astro';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const alternates = alternatesFor('/');
+const latest = (await getPosts(lang)).slice(0, 5);
+---
+
+<!doctype html>
+<html lang={htmlLang[lang]}>
+	<head>
+		<BaseHead title={SITE_TITLE} description={t('site.description')} lang={lang} alternates={alternates} />
+	</head>
+	<body>
+		<Header lang={lang} alternates={alternates} />
+		<main>
+			<section class="intro">
+				<h1>{t('home.greeting')}</h1>
+				<p>{t('home.intro')}</p>
+				<p class="links">
+					<a href="https://github.com/lewiswang0516" target="_blank" rel="noopener">{t('social.github')}</a>
+					<a href="https://lewiswang.com.au" target="_blank" rel="noopener">{t('social.portfolio')}</a>
+				</p>
+			</section>
+			<section>
+				<h2>{t('home.latest')}</h2>
+				<PostList posts={latest} lang={lang} />
+				<p class="all-posts">
+					<a href={localizePath('/blog/', lang)}>{t('home.allPosts')} &rarr;</a>
+				</p>
+			</section>
+		</main>
+		<Footer lang={lang} />
+	</body>
+</html>
+<style>
+	.intro {
+		margin-bottom: 3rem;
+	}
+	.intro h1 {
+		margin-bottom: 0.5rem;
+	}
+	.links {
+		display: flex;
+		gap: 1.5rem;
+	}
+	.all-posts {
+		margin-top: 2rem;
+	}
+</style>

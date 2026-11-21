@@ -16,7 +16,8 @@ This project uses my **personal** Cloudflare account only, never the company acc
 
 ## Common tasks
 
-- Write a post: add a Markdown or MDX file to `src/content/blog/`. Frontmatter fields are defined in `src/content.config.ts`.
+- Write a post: add a Markdown or MDX file to `src/content/blog/en/` (English, served at `/blog/<slug>/`) or `src/content/blog/zh/` (Chinese, served at `/zh/blog/<slug>/`). Use the same file name in both folders for a translated pair. Frontmatter fields are defined in `src/content.config.ts`.
+- UI text for both languages lives in `src/i18n/ui.ts`. See `docs/handover/i18n.md`.
 - Local dev: `npm run dev` (use `astro dev --background` from an agent).
 - Deploy: `npm run deploy` (builds, then `wrangler deploy`).
 - Live logs: `npm run tail`.
