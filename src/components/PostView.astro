@@ -1,0 +1,18 @@
+---
+import { render } from 'astro:content';
+import type { Lang } from '../i18n/ui';
+import type { Post } from '../i18n/utils';
+import BlogPost from '../layouts/BlogPost.astro';
+
+interface Props {
+	post: Post;
+	alternates: Partial<Record<Lang, string>>;
+}
+
+const { post, alternates } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPost {...post.data} lang={post.lang} alternates={alternates}>
+	<Content />
+</BlogPost>

@@ -1,0 +1,10 @@
+---
+import PostView from '../../../components/PostView.astro';
+import { getPostPaths } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+	return getPostPaths('zh');
+}
+---
+
+<PostView {...Astro.props} />

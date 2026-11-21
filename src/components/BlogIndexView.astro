@@ -1,0 +1,38 @@
+---
+import { SITE_TITLE } from '../consts';
+import { htmlLang, type Lang } from '../i18n/ui';
+import { alternatesFor, getPosts, useTranslations } from '../i18n/utils';
+import BaseHead from './BaseHead.astro';
+import Footer from './Footer.astro';
+import Header from './Header.astro';
+import PostList from './PostList.astro';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const alternates = alternatesFor('/blog/');
+const posts = await getPosts(lang);
+---
+
+<!doctype html>
+<html lang={htmlLang[lang]}>
+	<head>
+		<BaseHead
+			title={`${t('nav.blog')} | ${SITE_TITLE}`}
+			description={t('site.description')}
+			lang={lang}
+			alternates={alternates}
+		/>
+	</head>
+	<body>
+		<Header lang={lang} alternates={alternates} />
+		<main>
+			<h1>{t('nav.blog')}</h1>
+			<PostList posts={posts} lang={lang} />
+		</main>
+		<Footer lang={lang} />
+	</body>
+</html>

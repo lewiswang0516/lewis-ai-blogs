@@ -7,7 +7,22 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://blogs.lewiswang.com.au',
-	integrations: [mdx(), sitemap()],
+	i18n: {
+		locales: ['en', 'zh'],
+		defaultLocale: 'en',
+		routing: {
+			prefixDefaultLocale: false,
+		},
+	},
+	integrations: [
+		mdx(),
+		sitemap({
+			i18n: {
+				defaultLocale: 'en',
+				locales: { en: 'en', zh: 'zh-CN' },
+			},
+		}),
+	],
 	fonts: [
 		{
 			provider: fontProviders.local(),
