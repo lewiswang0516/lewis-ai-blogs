@@ -6,7 +6,7 @@ pubDate: '2026-11-21T01:14:00Z'
 
 This post is for people who already work with Claude Code every day, and want it to get things done while they are not watching. Read these first: Part 08 (MCP), Part 11 (plan mode and giving it a check), Part 12 (subagents), and Part 13 (the blog project retrospective). This is the last post in the series.
 
-In the previous fourteen posts, you mostly sat at the computer and worked with the AI back and forth. This post covers a different way to use it. You set the rules, and it starts on its own at a fixed time, or when something happens. When it finishes, it hands the result to you.
+In the previous thirteen posts, you mostly sat at the computer and worked with the AI back and forth. This post covers a different way to use it. You set the rules, and it starts on its own at a fixed time, or when something happens. When it finishes, it hands the result to you.
 
 This sounds attractive, but let me add a word of caution first. Automation amplifies a process you have already proven. Only think about automating a task after you and the AI have done it by hand a few times, and it went smoothly each time. If you have not worked out a task yourself, automation only makes it go wrong faster.
 

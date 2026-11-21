@@ -161,6 +161,8 @@ With this post, Stage 3, "Use it well and use it cheaply", is done. From the nex
 
 Part 13 is a retrospective of one full project: how I built this blog from scratch with AI, from choosing the stack, setting the rules and deploying it, to adding two languages and a redesign. It shows how plan mode, handover docs and subagents from the earlier posts worked in a real project, and where I hit problems.
 
+Read next: [Hands-On AI 13 | Build a Full Project from Scratch with AI: My Blog Retrospective](/blog/project-retrospective-blog/)
+
 ## References
 
 - [Create custom subagents](https://code.claude.com/docs/en/sub-agents): The official Claude Code subagent docs. Built-in subagents, forks, and the limits on concurrency and nesting are all here

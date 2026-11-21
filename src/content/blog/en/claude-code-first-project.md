@@ -175,7 +175,7 @@ There are three more commands worth trying in your first project.
 
 After this small project, you may notice that every new session needs the same explanation again: what the project is, what technology it uses, and what the rules are. The next post covers CLAUDE.md, the project instructions file written for AI: where it goes, what to write, how long it should be, and why writing too much actually hurts.
 
-Read next: [Hands-On AI 07 | How to Write CLAUDE.md and Project Instructions](/blog/claude-md/)
+Read next: [Hands-On AI 07 | How to Write CLAUDE.md, Your Project Guide](/blog/claude-md/)
 
 ## References
 

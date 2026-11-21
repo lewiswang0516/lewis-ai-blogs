@@ -161,6 +161,8 @@ claude -w feature-search
 
 13 是一次完整项目的复盘：我用 AI 从零搭起这个博客，从选型、定规矩、部署上线，到双语和改版。前面讲的计划模式、交接文档、子代理在真实项目里是怎么用上的，哪些地方我踩了坑。
 
+继续阅读：[AI 从入门到实战 13｜用 AI 从零做一个完整项目：我的博客复盘](/zh/blog/project-retrospective-blog/)
+
 ## 参考
 
 - [Create custom subagents](https://code.claude.com/docs/en/sub-agents)：Claude Code 官方子代理文档，内置子代理、分叉、并发和嵌套上限都在这里

@@ -161,7 +161,7 @@ None of these habits is a complex trick. Most are common sense, like "open a new
 
 The next post is about plan mode, checkpoints and rewind, and how to use them to redo less work.
 
-Keep reading: [Hands-On AI 11 | Plan Mode, Checkpoints and Rewind: A Workflow With Less Rework](/blog/plan-checkpoint-rewind/)
+Read next: [Hands-On AI 11 | Plan Mode, Checkpoints and Rewind: A Workflow with Less Rework](/blog/plan-checkpoint-rewind/)
 
 ## Further reading
 
