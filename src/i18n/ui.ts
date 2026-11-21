@@ -32,6 +32,7 @@ export const ui = {
 		'home.latest': 'Latest posts',
 		'home.allPosts': 'All posts',
 		'post.updated': 'Last updated on',
+		'post.readMore': 'Read more',
 		'footer.rights': 'All rights reserved.',
 	},
 	zh: {
@@ -47,6 +48,7 @@ export const ui = {
 		'home.latest': '最新文章',
 		'home.allPosts': '全部文章',
 		'post.updated': '最后更新于',
+		'post.readMore': '阅读全文',
 		'footer.rights': '保留所有权利。',
 	},
 } as const satisfies Record<Lang, Record<string, string>>;

@@ -1,39 +1,43 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	--primary-navy: #050451;
+	--primary-navy-light: #405aab;
+	--primary-gold: #ffcd0e;
+	--primary-light-gold: #fffcef;
+	--primary-purple: #dcd7ff;
+	--primary-purple-light: #dcd7ff66;
+	--secondary-mint: #e1f2ef;
+	--secondary-pink: #fcb1c1;
+	--neutral-background-light: #fffbf5;
+	--neutral-pink-background: #ffdfdf;
+	--neutral-stroke: #e2e8f0;
+	--muted-foreground: #62748e;
+	--card-shadow: 0 18px 48px rgba(5, 4, 81, 0.08);
+	--radius-card: 28px;
+	--page-width: 1160px;
+	--prose-width: 720px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 body {
-	font-family: var(--font-atkinson);
 	margin: 0;
 	padding: 0;
+	font-family: var(--font-outfit);
+	font-size: 17.5px;
+	line-height: 1.6;
+	color: var(--primary-navy);
+	background: var(--neutral-background-light);
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
 }
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
+	width: var(--page-width);
+	max-width: calc(100% - 2rem);
 	margin: auto;
-	padding: 3em 1em;
+	padding: 3rem 0 5rem;
 }
 h1,
 h2,
@@ -41,101 +45,168 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	margin: 0 0 0.5rem;
+	color: var(--primary-navy);
+	font-weight: 600;
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: clamp(2.25rem, 1.4rem + 3.6vw, 4rem);
+	line-height: 1;
+	letter-spacing: -0.012em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.625rem);
+	letter-spacing: -0.025em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.5rem;
 }
 h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 strong,
 b {
-	font-weight: 700;
+	font-weight: 600;
 }
 a {
-	color: var(--accent);
+	color: var(--primary-navy-light);
+	text-underline-offset: 3px;
 }
 a:hover {
-	color: var(--accent);
+	color: var(--primary-navy);
 }
 p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
+	margin: 0 0 1em;
 }
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
+	border-radius: 20px;
 }
 code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+	padding: 2px 6px;
+	font-size: 0.9em;
+	background-color: var(--primary-purple-light);
+	border-radius: 6px;
 }
 pre {
-	padding: 1.5em;
-	border-radius: 8px;
+	padding: 1.25rem 1.5rem;
+	overflow-x: auto;
+	border-radius: 20px;
 }
 pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
 	margin: 0;
-	font-size: 1.333em;
+	padding: 1rem 1.5rem;
+	background: var(--primary-light-gold);
+	border-left: 4px solid var(--primary-gold);
+	border-radius: 0 20px 20px 0;
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid var(--neutral-stroke);
 }
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95em;
+}
+th,
+td {
+	padding: 0.6rem 0.75rem;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid var(--neutral-stroke);
+}
+th {
+	font-weight: 600;
+	background: var(--primary-purple-light);
+}
+
+.prose {
+	color: var(--primary-navy);
+}
+.prose p,
+.prose ul,
+.prose ol,
+.prose table,
+.prose blockquote,
+.prose pre {
+	margin: 0 0 1.5em;
+}
+:lang(zh-CN) .prose {
+	line-height: 1.85;
+}
+.prose h2 {
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+	font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+	color: var(--primary-navy-light);
+}
+.prose h3 {
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+	font-size: 1.35rem;
+}
+.prose li {
+	margin-bottom: 0.4em;
+}
+.prose img {
+	display: block;
+	margin: 0 auto;
+	box-shadow: var(--card-shadow);
+}
+
+.pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.6rem 1.25rem;
+	font-weight: 500;
+	text-decoration: none;
+	border-radius: 999px;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+.pill-solid {
+	color: #fff;
+	background: var(--primary-navy);
+}
+.pill-solid:hover {
+	color: #fff;
+	background: var(--primary-navy-light);
+}
+.pill-outline {
+	color: var(--primary-navy);
+	background: #fff;
+	border: 1px solid var(--neutral-stroke);
+}
+.pill-outline:hover {
+	color: var(--primary-navy);
+	background: var(--primary-purple);
+}
+
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
-		padding: 1em;
+		padding: 2rem 0 3rem;
 	}
 }
 
 .sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
 	position: absolute !important;
-	height: 1px;
 	width: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+	border: 0;
+	clip-path: inset(50%);
 }
